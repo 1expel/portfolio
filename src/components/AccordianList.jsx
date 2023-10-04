@@ -11,7 +11,7 @@ function AccordianList() {
         number={"one"}
       />
       <Accordian 
-        title={"Data & Analysis Courses"} 
+        title={"Data Analysis Courses"} 
         content={"Machine Learning, Artificial Intelligence, Databases, Managerial Statistics, Windows Application Programming"}
         active={""} 
         hidden={" hidden"} 
