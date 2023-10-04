@@ -2,7 +2,7 @@
 function Landing() {
   return (
     <div className="flex justify-center items-center min-h-[90vh]">
-      <div className="border-2 w-[600px] mr-[50px] space-y-6">
+      <div className="w-[600px] mr-[50px] space-y-6">
         <h1>
           Connor Kanalec
         </h1>
