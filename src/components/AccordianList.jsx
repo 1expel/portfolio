@@ -26,7 +26,7 @@ function AccordianList() {
       />
       <Accordian 
         title={"Finance Courses"} 
-        content={"inancial Management II, Options, Futures & Swaps, Fixed Income Analysis, Advanced Corporate Finance, Investment Management"}
+        content={"Financial Management II, Options, Futures & Swaps, Fixed Income Analysis, Advanced Corporate Finance, Investment Management"}
         active={""} 
         hidden={" hidden"} 
         number={"four"}
