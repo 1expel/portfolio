@@ -2,4 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-
+@layer base {
+    h1 {
+        @apply text-6xl font-semibold;
+    }
+    h3 {
+        @apply text-3xl font-semibold;
+    }
+    h5 {
+        @apply text-xl font-semibold;
+    }
+    h6 {
+        @apply font-medium text-gray-800;
+    }
+    p {
+        @apply font-medium text-gray-600;
+    }
+    span {
+        @apply font-medium text-gray-600;
+    }
+}
