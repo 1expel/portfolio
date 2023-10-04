@@ -2,6 +2,7 @@
 function About() {
   return(
     <div className="flex flex-col justify-center items-center min-h-[90vh]">
+      <h1>accordian for coursework?</h1>
       <div className="w-[700px] space-y-4">
         <div>
           <div className="mb-6">
