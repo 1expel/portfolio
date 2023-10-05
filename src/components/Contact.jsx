@@ -3,7 +3,7 @@ import { GithubSvg } from "../assets/GithubSvg";
 
 function Contact() {
   return (
-    <div className="flex flex-col justify-center items-center min-h-[60vh] border-2">
+    <div className="flex flex-col justify-center items-center min-h-[60vh] py-12">
       <div className="w-[700px] space-y-6">
         <div>
           <h3>
