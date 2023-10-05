@@ -16,6 +16,7 @@ import { MatplotlibSvg } from "../assets/MatplotlibSvg";
 import { SeabornSvg } from "../assets/SeabornSvg";
 import { GitSvg } from "../assets/GitSvg";
 import { PostgreSvg } from "../assets/PostgreSvg";
+import { ViteSvg } from "../assets/ViteSvg";
 import { PostmanSvg } from "../assets/PostmanSvg";
 import { InsomniaSvg } from "../assets/InsomniaSvg";
 import { HerokuSvg } from "../assets/HerokuSvg";
@@ -68,6 +69,7 @@ function Skills() {
             <NodeSvg width="64" height="64"/>
             <GitSvg width="64" height="64"/>
             <PostgreSvg width="64" height="64"/>
+            <ViteSvg width="64" height="64"/>
             <PostmanSvg width="64" height="64"/>
             <InsomniaSvg width="64" height="64"/>
             <HerokuSvg width="64" height="64"/>
