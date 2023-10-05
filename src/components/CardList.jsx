@@ -1,6 +1,5 @@
 
 function CardList({children, tab1, tab2, tab3}) {
-  console.log(children)
   return (
     <div>
 

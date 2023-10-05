@@ -15,7 +15,7 @@ function Projects() {
     The dataset has 22 variables which are medical characteristics of the patient that a machine learning model can use to assist human diagnosis.`
   ];
   return (
-    <div className="flex flex-col justify-center items-center min-h-[90vh]">
+    <div className="flex flex-col justify-center items-center min-h-[90vh] border-2">
       <div className="w-[700px]">
         <div className="mb-6">
           <h3>
