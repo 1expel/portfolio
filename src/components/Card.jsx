@@ -1,9 +1,10 @@
+import { v4 as uuidv4 } from 'uuid';
 
 function Card({title, subtitles, contents, link}) {
 
   const subtitleArr = subtitles.map((subtitle, i) => {
     return (
-      <p key={i} className="mt-1 text-xs font-medium uppercase text-gray-500 dark:text-gray-500">
+      <p key={uuidv4()} className="mt-1 text-xs font-medium uppercase text-gray-500 dark:text-gray-500">
         {subtitle}
       </p>
     );
@@ -11,7 +12,7 @@ function Card({title, subtitles, contents, link}) {
 
   const contentArr = contents.map((content, i) => {
     return (
-      <p key={i} className="mt-2 dark:text-gray-400">
+      <p key={uuidv4()} className="mt-2 dark:text-gray-400">
         {content}
       </p>
     );
@@ -31,12 +32,6 @@ function Card({title, subtitles, contents, link}) {
       </h5>
       <div>
         {sectionArr}
-      </div>
-      <p className="mt-1 text-xs font-medium uppercase text-gray-500 dark:text-gray-500">
-        {subtitles}
-      </p>
-      <div className="">
-        {contentArr}
       </div>
       <a className="mt-3 inline-flex items-center gap-2 mt-5 text-sm font-medium text-blue-500 hover:text-blue-700" href={link}>
         Git Repo

@@ -8,11 +8,9 @@ function Projects() {
     "Results",
   ]
   const content = [
-    `Problem & Solution`,
     `Created the Hyperthyroidism Diagnosis Assistant, a software program that leverages machine 
     learning models to support medical professionals in the accurate and timely diagnosis of hyperthyroidism.
     This project uses machine-learning models to predict whether a patient has a hyperthyroid condition.`,
-    `Dataset`,
     `The project uses a dataset from the Thyroid Disease Database from UCI machine learning repository which has more than 3000 cases. 
     The dataset has 22 variables which are medical characteristics of the patient that a machine learning model can use to assist human diagnosis.`
   ];
@@ -24,35 +22,26 @@ function Projects() {
                 Projects
             </h3>
         </div>
-        <CardList 
-          tab1={"Overview"}
-          card1={
-            <Card 
-              title={"Hyperthyroidism Diagnosis Assistant"}
-              subtitles={subtitles}
-              contents={content}
-              link={"https://github.com/ConkCodes/hyperthyroidism-predictor"}
-            />
-          }
-          tab2={"My Role"}
-          card2={
-            <Card 
-              title={"Hyperthyroidism Diagnosis Assistant"}
-              subtitles={["My Role/Tech Used"]}
-              contents={["content"]}
-              link={"https://github.com/ConkCodes/hyperthyroidism-predictor"}
-            />
-          }
-          tab3={"Subtitle"}
-          card3={
-            <Card 
-              title={"Hyperthyroidism Diagnosis Assistant"}
-              subtitles={["subtitle"]}
-              contents={["content"]}
-              link={"https://github.com/ConkCodes/hyperthyroidism-predictor"}
-            />
-          }
-        />
+        <CardList tab1={"Overview"} tab2={"My Role"} tab3={"Subtitle"}>
+          <Card 
+            title={"Hyperthyroidism Diagnosis Assistant"}
+            subtitles={subtitles}
+            contents={content}
+            link={"https://github.com/ConkCodes/hyperthyroidism-predictor"}
+          />
+          <Card 
+            title={"Hyperthyroidism Diagnosis Assistant"}
+            subtitles={["My Role/Tech Used"]}
+            contents={["content"]}
+            link={"https://github.com/ConkCodes/hyperthyroidism-predictor"}
+          />
+          <Card 
+            title={"Hyperthyroidism Diagnosis Assistant"}
+            subtitles={["subtitle"]}
+            contents={["content"]}
+            link={"https://github.com/ConkCodes/hyperthyroidism-predictor"}
+          />
+        </CardList>
       </div>
     </div>
   )
