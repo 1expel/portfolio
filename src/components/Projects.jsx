@@ -2,6 +2,11 @@ import CardList from './CardList';
 import Card from './Card';
 
 function Projects() {
+  const subtitles = [
+    "Problem & Solution",
+    "Dataset",
+    "Results",
+  ]
   const content = [
     `Problem & Solution`,
     `Created the Hyperthyroidism Diagnosis Assistant, a software program that leverages machine 
@@ -24,8 +29,8 @@ function Projects() {
           card1={
             <Card 
               title={"Hyperthyroidism Diagnosis Assistant"}
-              subtitle={"Overview"}
-              content={content}
+              subtitles={subtitles}
+              contents={content}
               link={"https://github.com/ConkCodes/hyperthyroidism-predictor"}
             />
           }
@@ -33,8 +38,8 @@ function Projects() {
           card2={
             <Card 
               title={"Hyperthyroidism Diagnosis Assistant"}
-              subtitle={"My Role/Tech Used"}
-              content={["content"]}
+              subtitles={["My Role/Tech Used"]}
+              contents={["content"]}
               link={"https://github.com/ConkCodes/hyperthyroidism-predictor"}
             />
           }
@@ -42,8 +47,8 @@ function Projects() {
           card3={
             <Card 
               title={"Hyperthyroidism Diagnosis Assistant"}
-              subtitle={"subtitle"}
-              content={["content"]}
+              subtitles={["subtitle"]}
+              contents={["content"]}
               link={"https://github.com/ConkCodes/hyperthyroidism-predictor"}
             />
           }
