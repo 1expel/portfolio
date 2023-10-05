@@ -2,7 +2,7 @@ import Accordian from './Accordian';
 
 function AccordianList() {
   return (
-    <div class="hs-accordion-group">
+    <div className="hs-accordion-group">
       <Accordian 
         title={"Software Dev Courses"}
         content={"Software Engineering, Data Structures II, Algorithm Design & Analysis, Object-Oriented Programming, Operating Systems, Computer Security"} 

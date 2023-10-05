@@ -2,6 +2,15 @@ import CardList from './CardList';
 import Card from './Card';
 
 function Projects() {
+  const content = [
+    `Problem & Solution`,
+    `Created the Hyperthyroidism Diagnosis Assistant, a software program that leverages machine 
+    learning models to support medical professionals in the accurate and timely diagnosis of hyperthyroidism.
+    This project uses machine-learning models to predict whether a patient has a hyperthyroid condition.`,
+    `Dataset`,
+    `The project uses a dataset from the Thyroid Disease Database from UCI machine learning repository which has more than 3000 cases. 
+    The dataset has 22 variables which are medical characteristics of the patient that a machine learning model can use to assist human diagnosis.`
+  ];
   return (
     <div className="flex flex-col justify-center items-center min-h-[90vh]">
       <div className="w-[700px]">
@@ -16,7 +25,7 @@ function Projects() {
             <Card 
               title={"Hyperthyroidism Diagnosis Assistant"}
               subtitle={"Overview"}
-              content={"content"}
+              content={content}
               link={"https://github.com/ConkCodes/hyperthyroidism-predictor"}
             />
           }
@@ -25,7 +34,7 @@ function Projects() {
             <Card 
               title={"Hyperthyroidism Diagnosis Assistant"}
               subtitle={"My Role/Tech Used"}
-              content={"content"}
+              content={["content"]}
               link={"https://github.com/ConkCodes/hyperthyroidism-predictor"}
             />
           }
@@ -34,7 +43,7 @@ function Projects() {
             <Card 
               title={"Hyperthyroidism Diagnosis Assistant"}
               subtitle={"subtitle"}
-              content={"content"}
+              content={["content"]}
               link={"https://github.com/ConkCodes/hyperthyroidism-predictor"}
             />
           }
