@@ -18,9 +18,9 @@ function Projects() {
     <div className="flex flex-col justify-center items-center min-h-[90vh]">
       <div className="w-[700px]">
         <div className="mb-6">
-            <h3>
-                Projects
-            </h3>
+          <h3>
+            Projects
+          </h3>
         </div>
         <CardList tab1={"Overview"} tab2={"My Role"} tab3={"Subtitle"}>
           <Card 
