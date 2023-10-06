@@ -27,7 +27,6 @@ function App() {
   useEffect(() => {
     activeLinkNav(navRef, linksRef, landingRef, aboutRef, coursesRef, projectsRef, skillsRef, contactRef);
     fixedNav(placeholderRef, navRef, landingRef); 
-    // smoothScroll(linksRef, landingRef, aboutRef, coursesRef, projectsRef, skillsRef, contactRef)
     // Clean up by removing the event listener when the component unmounts
     return () => {
       // clean up observer
@@ -35,35 +34,8 @@ function App() {
     }
   }, []);
 
-  const handleSmoothScroll = (idk) => {
-    console.log(idk);
-    let element;
-    switch(idk) {
-      case "landing":
-        element = landingRef.current;
-        break;
-      case "about":
-        element = aboutRef.current;
-        break;
-      case "courses":
-        element = coursesRef.current;
-        break;
-      case "projects":
-        element = projectsRef.current;
-        break;
-      case "skills":
-        element = skillsRef.current;
-        break;
-      case "contact":
-        element = contactRef.current;
-        break;
-    }
-    // minus 100 to compensate for nav bar height is 100px
-    const topPos = element.getBoundingClientRect().top + window.scrollY - navRef.current.offsetHeight;
-    window.scrollTo({
-      top: topPos, // scroll so that the element is at the top of the view
-      behavior: 'smooth' // smooth scroll
-    });
+  const handleSmoothScroll = (sectionName) => {
+    smoothScroll(sectionName, navRef, landingRef, aboutRef, coursesRef, projectsRef, skillsRef, contactRef)
   }
 
   return (

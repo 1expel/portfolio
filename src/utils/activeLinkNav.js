@@ -25,7 +25,6 @@ const activeLinkNav = (navRef, linksRef, landingRef, aboutRef, coursesRef, proje
       links.children[index].classList.add("activeNavLink");
       links.children[index].classList.remove("navLink");
       for(let i = 0; i < sections.length - 1; i++) {
-        console.log("loop")
         links.children[i].classList.remove("activeNavLink");
         links.children[i].classList.add("navLink");
       }
