@@ -21,6 +21,9 @@
   span {
     @apply font-medium text-gray-600;
   }
+  a {
+    cursor: pointer;
+  }
 }
 
 @layer utilities {

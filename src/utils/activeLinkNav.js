@@ -21,9 +21,7 @@ const activeLinkNav = (navRef, linksRef, landingRef, aboutRef, coursesRef, proje
     // the logic for entering a section below doesnt work for the contacts section becuase it is too small & at the bottom of the page
     // 50 pixels from the bottom
     if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 50) {
-      console.log("here")
       index = sections.length - 1;
-      console.log(index)
       links.children[index].classList.add("activeNavLink");
       links.children[index].classList.remove("navLink");
       for(let i = 0; i < sections.length - 1; i++) {
@@ -36,7 +34,6 @@ const activeLinkNav = (navRef, linksRef, landingRef, aboutRef, coursesRef, proje
     else {
       // check which section we are at
       sections.forEach((current, i) => {
-        console.log("finna finesse")
         const sectionHeight = current.offsetHeight;
         const sectionTop = current.offsetTop - nav.offsetHeight - 1; // nav is fixed at the top, must remove its height
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
@@ -53,6 +50,11 @@ const activeLinkNav = (navRef, linksRef, landingRef, aboutRef, coursesRef, proje
   }
 
   window.addEventListener("scroll", callback);
+
+  // // Clean up by removing the event listener when the component unmounts
+  // return () => {
+  //   window.removeEventListener('scroll', handleScroll);
+  // };
 
 }
 

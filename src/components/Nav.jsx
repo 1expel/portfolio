@@ -1,5 +1,5 @@
 
-function Nav({navRef, linksRef}) {
+function Nav({navRef, linksRef, handleSmoothScroll}) {
   return (
     <header ref={navRef} className="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white text-sm py-4 dark:bg-gray-800">
       <nav className="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between" aria-label="Global">
@@ -18,12 +18,12 @@ function Nav({navRef, linksRef}) {
         </div>
         <div id="navbar-with-collapse" className="hidden basis-full grow sm:block">
           <div ref={linksRef} className="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:pl-5">
-            <a className="font-medium activeNavLink" href="#" aria-current="page">Landing</a>
-            <a className="font-medium navLink" href="#">About</a>
-            <a className="font-medium navLink" href="#">Courses</a>
-            <a className="font-medium navLink" href="#">Projects</a>
-            <a className="font-medium navLink" href="#">Skills</a>
-            <a className="font-medium navLink" href="#">Contact</a>
+            <a onClick={() => handleSmoothScroll("landing")} className="font-medium activeNavLink" aria-current="page">Landing</a>
+            <a onClick={() => handleSmoothScroll("about")} className="font-medium navLink">About</a>
+            <a onClick={() => handleSmoothScroll("courses")} className="font-medium navLink">Courses</a>
+            <a onClick={() => handleSmoothScroll("projects")} className="font-medium navLink">Projects</a>
+            <a onClick={() => handleSmoothScroll("skills")} className="font-medium navLink">Skills</a>
+            <a onClick={() => handleSmoothScroll("contact")} className="font-medium navLink">Contact</a>
           </div>
         </div>
       </nav>
