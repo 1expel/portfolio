@@ -22,9 +22,9 @@ import { InsomniaSvg } from "../assets/InsomniaSvg";
 import { HerokuSvg } from "../assets/HerokuSvg";
 import { VscodeSvg } from "../assets/VscodeSvg";
 
-function Skills() {
+function Skills({skillsRef}) {
   return (
-    <div className="flex flex-col justify-center items-center min-h-[90vh] py-12">
+    <div ref={skillsRef} className="flex flex-col justify-center items-center min-h-[90vh] py-12">
       <div className="w-[700px]">
         <div className="mb-6">
           <h3>
