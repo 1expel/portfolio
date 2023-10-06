@@ -1,9 +1,9 @@
 import { LinkedinSvg } from "../assets/LinkedinSvg";
 import { GithubSvg } from "../assets/GithubSvg";
 
-function Contact() {
+function Contact({contactRef}) {
   return (
-    <div className="flex flex-col justify-center items-center min-h-[60vh] py-12">
+    <div ref={contactRef} className="flex flex-col justify-center items-center min-h-[60vh] py-12">
       <div className="w-[700px] space-y-6">
         <div>
           <h3>

@@ -3,7 +3,7 @@ import Card from './Card';
 
 function Projects({projectsRef}) {
   return (
-    <div ref={projectsRef} className="flex flex-col justify-center items-center min-h-[90vh] py-12">
+    <div ref={projectsRef} className="flex flex-col justify-center items-center py-12">
       <div className="w-[700px]">
         <div className="mb-6">
           <h3>

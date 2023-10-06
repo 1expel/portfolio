@@ -24,7 +24,7 @@ import { VscodeSvg } from "../assets/VscodeSvg";
 
 function Skills({skillsRef}) {
   return (
-    <div ref={skillsRef} className="flex flex-col justify-center items-center min-h-[90vh] py-12">
+    <div ref={skillsRef} className="flex flex-col justify-center items-center py-12">
       <div className="w-[700px]">
         <div className="mb-6">
           <h3>
