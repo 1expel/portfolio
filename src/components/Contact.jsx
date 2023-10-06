@@ -7,7 +7,7 @@ function Contact() {
       <div className="w-[700px] space-y-6">
         <div>
           <h3>
-            Thank You - Feel Free to Contact Me
+            Thank You
           </h3>
         </div>
         <div>
