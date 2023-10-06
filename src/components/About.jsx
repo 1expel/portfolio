@@ -1,4 +1,3 @@
-import AccordianList from './AccordianList';
 
 function About({aboutRef}) {
   return(
@@ -21,12 +20,6 @@ function About({aboutRef}) {
               The dynamic nature of technology, from software engineering to machine learning and data analysis, 
               keeps me motivated to expand my skill set and embrace new challenges.
             </p>
-          </div>
-          <div className="space-y-2">
-            <h5>
-              Coursework
-            </h5>
-            <AccordianList/>
           </div>
         </div>
       </div>

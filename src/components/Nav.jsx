@@ -20,6 +20,7 @@ function Nav({navRef, linksRef}) {
           <div ref={linksRef} className="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:pl-5">
             <a className="font-medium activeNavLink" href="#" aria-current="page">Landing</a>
             <a className="font-medium navLink" href="#">About</a>
+            <a className="font-medium navLink" href="#">Courses</a>
             <a className="font-medium navLink" href="#">Projects</a>
             <a className="font-medium navLink" href="#">Skills</a>
             <a className="font-medium navLink" href="#">Contact</a>

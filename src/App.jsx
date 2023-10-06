@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import Nav from './components/Nav';
 import Landing from './components/Landing';
 import About from './components/About';
+import Courses from './components/Courses';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
@@ -16,12 +17,13 @@ function App() {
   const linksRef = useRef(null);
   const landingRef = useRef(null);
   const aboutRef = useRef(null);
+  const coursesRef = useRef(null);
   const projectsRef = useRef(null);
   const skillsRef = useRef(null);
 
   // useEffect to listen for nav & landing mounting
   useEffect(() => {
-    activeLinkNav(navRef, linksRef, landingRef, aboutRef, projectsRef, skillsRef);
+    activeLinkNav(navRef, linksRef, landingRef, aboutRef, coursesRef, projectsRef, skillsRef);
     return fixedNav(placeholderRef, navRef, landingRef);    
   }, []);
 
@@ -31,6 +33,7 @@ function App() {
       <Nav navRef={navRef} linksRef={linksRef}/>
       <Landing landingRef={landingRef}/>
       <About aboutRef={aboutRef}/>
+      <Courses coursesRef={coursesRef}/>
       <Projects projectsRef={projectsRef}/>
       <Skills skillsRef={skillsRef}/>
       <Contact/>

@@ -1,14 +1,15 @@
 
-const activeLinkNav = (navRef, linksRef, landingRef, aboutRef, projectsRef, skillsRef) => {
+const activeLinkNav = (navRef, linksRef, landingRef, aboutRef, coursesRef, projectsRef, skillsRef) => {
 
   // get elements from references
   const nav = navRef.current;
   const links = linksRef.current;
   const landing = landingRef.current;
   const about = aboutRef.current;
+  const courses = coursesRef.current;
   const projects = projectsRef.current;
   const skills = skillsRef.current;
-  const sections = [landing, about, projects, skills];
+  const sections = [landing, about, courses, projects, skills];
 
   // callback for scroll event
   const callback = () => {
