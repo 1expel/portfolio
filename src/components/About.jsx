@@ -1,7 +1,7 @@
 
 function About({aboutRef}) {
   return(
-    <div ref={aboutRef} className="flex flex-col justify-center items-center min-h-[90vh] py-12">
+    <div ref={aboutRef} className="flex flex-col justify-center items-center py-12">
       <div className="w-[700px]">
         <div>
           <div className="mb-6">

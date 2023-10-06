@@ -20,10 +20,11 @@ function App() {
   const coursesRef = useRef(null);
   const projectsRef = useRef(null);
   const skillsRef = useRef(null);
+  const contactRef = useRef(null);
 
   // useEffect to listen for nav & landing mounting
   useEffect(() => {
-    activeLinkNav(navRef, linksRef, landingRef, aboutRef, coursesRef, projectsRef, skillsRef);
+    activeLinkNav(navRef, linksRef, landingRef, aboutRef, coursesRef, projectsRef, skillsRef, contactRef);
     return fixedNav(placeholderRef, navRef, landingRef);    
   }, []);
 
@@ -36,7 +37,7 @@ function App() {
       <Courses coursesRef={coursesRef}/>
       <Projects projectsRef={projectsRef}/>
       <Skills skillsRef={skillsRef}/>
-      <Contact/>
+      <Contact contactRef={contactRef}/>
     </div>
   );
   
