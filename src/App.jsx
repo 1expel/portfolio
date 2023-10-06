@@ -6,8 +6,8 @@ import Courses from './components/Courses';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
-import fixedNav from './utils/fixedNav';
-import activeLinkNav from './utils/activeLinkNav';
+import {handleFixedNav, options} from './utils/handleFixedNav';
+import handleNavLinks from './utils/handleNavLinks';
 import smoothScroll from './utils/smoothScroll';
 
 function App() {
@@ -25,13 +25,40 @@ function App() {
 
   // useEffect to listen for nav & landing mounting
   useEffect(() => {
-    activeLinkNav(navRef, linksRef, landingRef, aboutRef, coursesRef, projectsRef, skillsRef, contactRef);
-    fixedNav(placeholderRef, navRef, landingRef); 
-    // Clean up by removing the event listener when the component unmounts
+
+    // get elements from references
+    const placeholder = placeholderRef.current;
+    const nav = navRef.current;
+    const links = linksRef.current;
+    const landing = landingRef.current;
+    const about = aboutRef.current;
+    const courses = coursesRef.current;
+    const projects = projectsRef.current;
+    const skills = skillsRef.current;
+    const contact = contactRef.current;
+    const sections = [landing, about, courses, projects, skills, contact];
+
+    // intersection observer object for toggling between fixed and default nav
+    const observer = new IntersectionObserver((entries, observer) => handleFixedNav(entries, observer, placeholder, nav), options);
+
+    // start observing landing component, when in/out of view we want to change navbar style
+    if (landing) {
+      observer.observe(landing);
+    }
+
+    // scroll event listener for active nav links based on section in view
+    window.addEventListener("scroll", () => handleNavLinks(nav, links, sections)); 
+
+    // Clean up by removing the event listener & intersection observer when the component unmounts
     return () => {
       // clean up observer
+      if (landingRef.current) {
+        observer.unobserve(landingRef.current);
+      }
       // clean up event listener
+      window.removeEventListener('scroll', () => handleNavLinks(entries, observer, nav, links, sections));
     }
+
   }, []);
 
   const handleSmoothScroll = (sectionName) => {
