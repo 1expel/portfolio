@@ -8,6 +8,7 @@ import Skills from './components/Skills';
 import Contact from './components/Contact';
 import fixedNav from './utils/fixedNav';
 import activeLinkNav from './utils/activeLinkNav';
+import smoothScroll from './utils/smoothScroll';
 
 function App() {
 
@@ -25,13 +26,22 @@ function App() {
   // useEffect to listen for nav & landing mounting
   useEffect(() => {
     activeLinkNav(navRef, linksRef, landingRef, aboutRef, coursesRef, projectsRef, skillsRef, contactRef);
-    return fixedNav(placeholderRef, navRef, landingRef);    
+    fixedNav(placeholderRef, navRef, landingRef); 
+    // Clean up by removing the event listener when the component unmounts
+    return () => {
+      // clean up observer
+      // clean up event listener
+    }
   }, []);
+
+  const handleSmoothScroll = (sectionName) => {
+    smoothScroll(sectionName, navRef, landingRef, aboutRef, coursesRef, projectsRef, skillsRef, contactRef)
+  }
 
   return (
     <div>
       <div ref={placeholderRef}></div>
-      <Nav navRef={navRef} linksRef={linksRef}/>
+      <Nav navRef={navRef} linksRef={linksRef} handleSmoothScroll={handleSmoothScroll}/>
       <Landing landingRef={landingRef}/>
       <About aboutRef={aboutRef}/>
       <Courses coursesRef={coursesRef}/>

@@ -9,15 +9,12 @@ const fixedNav = (placeholderRef, navRef, landingRef) => {
     entries.forEach((entry) => {
       // The target element is in view
       if (entry.isIntersecting) {
-        console.log(navElement.offsetHeight);
         navElement.classList.remove("nav2");
         placeholderElement.classList.remove("h-[60px]");
-        console.log('Element is in view');
       // The target element is out of view
       } else {
         navElement.classList.add("nav2");
         placeholderElement.classList.add("h-[60px]");
-        console.log('Element is out of view');
       }
     });
   }
@@ -33,11 +30,11 @@ const fixedNav = (placeholderRef, navRef, landingRef) => {
   if (landingElement) {
     observer.observe(landingElement);
   }
-  return () => {
-    if (landingRef.current) {
-      observer.unobserve(landingRef.current);
-    }
-  };
+  // return () => {
+  //   if (landingRef.current) {
+  //     observer.unobserve(landingRef.current);
+  //   }
+  // };
 }
 
 export default fixedNav;
