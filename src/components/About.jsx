@@ -1,8 +1,8 @@
 import AccordianList from './AccordianList';
 
-function About() {
+function About({aboutRef}) {
   return(
-    <div className="flex flex-col justify-center items-center min-h-[90vh] py-12">
+    <div ref={aboutRef} className="flex flex-col justify-center items-center min-h-[90vh] py-12">
       <div className="w-[700px]">
         <div>
           <div className="mb-6">
