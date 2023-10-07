@@ -1,15 +1,15 @@
 
 // callback for intersection observer
-export const handleFixedNav = (entries, observer, placeholder, nav) => {
+export const handleFixedNav = (entries, observer, nav) => {
   entries.forEach((entry) => {
     // The target element is in view
     if (entry.isIntersecting) {
       nav.classList.remove("nav2");
-      placeholder.classList.remove("h-[60px]");
+      nav.classList.add("absolute");
     // The target element is out of view
     } else {
+      nav.classList.remove("absolute");
       nav.classList.add("nav2");
-      placeholder.classList.add("h-[60px]");
     }
   });
 }

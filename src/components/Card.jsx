@@ -10,24 +10,28 @@ function Card({title, subtitles, contents, link}) {
     );
   });
 
-  // contents is a 2D array. as some content parts need to have multiple p tags under 1 subtitle
+  // contents is a 2D array. as some content parts need to have multiple li tags under 1 subtitle
   const contentArr = contents.map((content, i) => {
     if(content.length > 1) {
       // returns an array of p tags to content Arr that will all be put under 1 subtitle
       return (
-        content.map(x => {
+        <ul key={uuidv4()}>
+          {content.map(x => {
           return (
-            <p key={uuidv4()} className="mt-1">
+            <li key={uuidv4()} className="mt-1">
               {x}
-            </p>
+            </li>
           )
-        })
+          })}
+        </ul>
       )
     } else {
       return (
-        <p key={uuidv4()} className="mt-1">
-          {content}
-        </p>
+        <ul key={uuidv4()}>
+          <li key={uuidv4()} className="mt-1">
+            {content}
+          </li>
+        </ul>
       );
     }
 

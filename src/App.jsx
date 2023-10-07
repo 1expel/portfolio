@@ -13,7 +13,6 @@ import smoothScroll from './utils/smoothScroll';
 function App() {
 
   // Create refs for child components
-  const placeholderRef = useRef(null);
   const navRef = useRef(null);
   const linksRef = useRef(null);
   const landingRef = useRef(null);
@@ -27,7 +26,6 @@ function App() {
   useEffect(() => {
 
     // get elements from references
-    const placeholder = placeholderRef.current;
     const nav = navRef.current;
     const links = linksRef.current;
     const landing = landingRef.current;
@@ -39,7 +37,7 @@ function App() {
     const sections = [landing, about, courses, projects, skills, contact];
 
     // intersection observer object for toggling between fixed and default nav
-    const observer = new IntersectionObserver((entries, observer) => handleFixedNav(entries, observer, placeholder, nav), options);
+    const observer = new IntersectionObserver((entries, observer) => handleFixedNav(entries, observer, nav), options);
 
     // start observing landing component, when in/out of view we want to change navbar style
     if (landing) {
@@ -67,7 +65,6 @@ function App() {
 
   return (
     <div>
-      <div ref={placeholderRef}></div>
       <Nav navRef={navRef} linksRef={linksRef} handleSmoothScroll={handleSmoothScroll}/>
       <Landing landingRef={landingRef}/>
       <About aboutRef={aboutRef}/>

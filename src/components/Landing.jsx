@@ -3,7 +3,7 @@ import { GithubSvg } from "../assets/GithubSvg";
 
 function Landing({landingRef}) {
   return (
-    <div ref={landingRef} className="flex justify-center items-center min-h-[90vh] py-12">
+    <div ref={landingRef} className="flex justify-center items-center min-h-[100vh] py-12">
       <div className="text-center sm:text-left sm:w-[400px] lg:w-[600px] px-4 sm:px-0 sm:mr-[25px] lg:mr-[50px] space-y-6">
         <h1>
           Connor Kanalec
