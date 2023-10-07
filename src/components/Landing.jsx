@@ -4,7 +4,7 @@ import { GithubSvg } from "../assets/GithubSvg";
 function Landing({landingRef}) {
   return (
     <div ref={landingRef} className="flex justify-center items-center min-h-[100vh] py-12">
-      <div className="text-center sm:text-left sm:w-[400px] lg:w-[600px] px-4 sm:px-0 sm:mr-[25px] lg:mr-[50px] space-y-6">
+      <div className="text-center sm:text-left sm:w-[300px] lg:w-[500px] px-4 sm:px-0 sm:mr-[15px] lg:mr-[50px] responsiveSpaceY6">
         <h1>
           Connor Kanalec
         </h1>
@@ -28,7 +28,7 @@ function Landing({landingRef}) {
         <img
           src="./pfp.jpg" 
           alt="profile pic" 
-          className="sm:w-[200px] lg:w-[300px] h-[auto]"
+          className="sm:w-[200px] lg:w-[250px] h-[auto]"
         />
       </div>
     </div>
