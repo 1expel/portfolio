@@ -25,8 +25,8 @@ function Landing({landingRef}) {
         </div>
       </div>
       <div className="hidden sm:block border-2 rounded-full overflow-hidden">
-        <img 
-          src="src/assets/pfp.jpg" 
+        <img
+          src="./pfp.jpg" 
           alt="profile pic" 
           className="sm:w-[200px] lg:w-[300px] h-[auto]"
         />
