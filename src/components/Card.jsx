@@ -4,18 +4,33 @@ function Card({title, subtitles, contents, link}) {
 
   const subtitleArr = subtitles.map((subtitle, i) => {
     return (
-      <p key={uuidv4()} className="mt-2 text-xs font-medium uppercase text-gray-500 dark:text-gray-500">
+      <h6 key={uuidv4()} className="mt-2">
         {subtitle}
-      </p>
+      </h6>
     );
   });
 
+  // contents is a 2D array. as some content parts need to have multiple p tags under 1 subtitle
   const contentArr = contents.map((content, i) => {
-    return (
-      <p key={uuidv4()} className="mt-1 dark:text-gray-400">
-        {content}
-      </p>
-    );
+    if(content.length > 1) {
+      // returns an array of p tags to content Arr that will all be put under 1 subtitle
+      return (
+        content.map(x => {
+          return (
+            <p key={uuidv4()} className="mt-1">
+              {x}
+            </p>
+          )
+        })
+      )
+    } else {
+      return (
+        <p key={uuidv4()} className="mt-1">
+          {content}
+        </p>
+      );
+    }
+
   });
 
   const sectionArr = [];

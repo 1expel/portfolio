@@ -4,15 +4,15 @@ import { GithubSvg } from "../assets/GithubSvg";
 function Landing({landingRef}) {
   return (
     <div ref={landingRef} className="flex justify-center items-center min-h-[90vh] py-12">
-      <div className="w-[600px] mr-[50px] space-y-6">
+      <div className="text-center sm:text-left sm:w-[400px] lg:w-[600px] px-4 sm:px-0 sm:mr-[25px] lg:mr-[50px] space-y-6">
         <h1>
           Connor Kanalec
         </h1>
         <p>
-          I'm a recent graduate in business and computer science passionate about leveraging technology to solve real-world problems, 
+          Passionate about leveraging technology to solve real-world problems, 
           and eager to embark on my career in the world of technology!
         </p>
-        <div className="flex gap-x-4">
+        <div className="flex justify-center sm:justify-normal gap-x-4">
           <a href="https://www.linkedin.com/in/connor-kanalec/">
             <LinkedinSvg width="32" height="32"/>
           </a>
@@ -24,11 +24,11 @@ function Landing({landingRef}) {
           </a>
         </div>
       </div>
-      <div className="border-2 rounded-full overflow-hidden">
+      <div className="hidden sm:block border-2 rounded-full overflow-hidden">
         <img 
           src="src/assets/pfp.jpg" 
           alt="profile pic" 
-          className="w-[300px] h-[auto]"
+          className="sm:w-[200px] lg:w-[300px] h-[auto]"
         />
       </div>
     </div>

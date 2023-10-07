@@ -2,9 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 
+sm: 640px
+md: 768px
+lg: 1024px
+xl: 1280px
+2xl: 1536px
+*/
+
 @layer base {
   h1 {
-    @apply text-6xl font-semibold;
+    @apply text-4xl sm:text-5xl lg:text-6xl font-semibold;
   }
   h3 {
     @apply text-3xl font-semibold;
@@ -13,16 +21,19 @@
     @apply text-lg font-semibold;
   }
   h6 {
-    @apply font-semibold;
+    @apply text-sm font-semibold uppercase dark:text-gray-500;
   }
   p {
-    @apply font-medium text-gray-600;
+    @apply text-sm font-medium text-gray-800 dark:text-gray-400;
   }
   span {
     @apply font-medium text-gray-600;
   }
   a {
     cursor: pointer;
+  }
+  li {
+    @apply font-medium text-gray-800 dark:text-gray-400;
   }
 }
 
@@ -45,4 +56,30 @@
   .navLink {
     @apply text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500;
   }
+  /* w-100% is necessary for skills section because flex svgs has overflow with no set width */
+  .responsiveContainer {
+    @apply px-4 w-[100%] sm:px-0 sm:w-[500px] lg:w-[700px]
+  }
+  /* responsive margins */
+  .responsiveMarginB6 {
+    @apply mb-4 sm:mb-6
+  }
+  .responsiveMarginB2 {
+    @apply mb-1 sm:mb-2
+  }
+  /* responsive padding */
+  .responsivePaddingY12 {
+    @apply py-8 sm:py-12
+  }
+  /* responsive space-y */
+  .responsiveSpaceY6 {
+    @apply space-y-4 sm:space-y-6
+  }
+  .responsiveSpaceY4 {
+    @apply space-y-3 sm:space-y-4
+  }
+  .responsiveSpaceY2 {
+    @apply space-y-1 sm:space-y-2
+  }
+
 }
