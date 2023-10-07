@@ -32,8 +32,11 @@ xl: 1280px
   a {
     cursor: pointer;
   }
+  ul {
+    @apply list-disc ml-4
+  }
   li {
-    @apply font-medium text-gray-800 dark:text-gray-400;
+    @apply text-sm font-medium text-gray-800 dark:text-gray-400;
   }
 }
 
@@ -76,7 +79,7 @@ xl: 1280px
     @apply space-y-4 sm:space-y-6
   }
   .responsiveSpaceY4 {
-    @apply space-y-3 sm:space-y-4
+    @apply space-y-2 sm:space-y-4
   }
   .responsiveSpaceY2 {
     @apply space-y-1 sm:space-y-2
