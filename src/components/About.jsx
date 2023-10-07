@@ -1,10 +1,10 @@
 
 function About({aboutRef}) {
   return(
-    <div ref={aboutRef} className="flex flex-col justify-center items-center py-12">
-      <div className="w-[700px]">
+    <div ref={aboutRef} className="flex flex-col justify-center items-center responsivePaddingY12">
+      <div className="responsiveContainer">
         <div>
-          <div className="mb-6">
+          <div className="responsiveMarginB6">
             <h3>
               About Me
             </h3>

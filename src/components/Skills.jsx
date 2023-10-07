@@ -24,19 +24,19 @@ import { VscodeSvg } from "../assets/VscodeSvg";
 
 function Skills({skillsRef}) {
   return (
-    <div ref={skillsRef} className="flex flex-col justify-center items-center py-12">
-      <div className="w-[700px]">
-        <div className="mb-6">
+    <div ref={skillsRef} className="flex flex-col justify-center items-center responsivePaddingY12">
+      <div className="responsiveContainer">
+        <div className="responsiveMarginB6">
           <h3>
             Skills
           </h3>
         </div>
-        <div className="space-y-4">
+        <div className="responsiveSpaceY4">
           <div>
-            <h5 className="mb-2">
+            <h5 className="responsiveMarginB2">
               Languages
             </h5>
-            <div className="flex gap-x-4">
+            <div className="flex gap-x-2 sm:gap-x-4">
               <JavaScriptSvg width="64" height="64"/>
               <JavaSvg width="64" height="64"/>
               <PythonSvg width="64" height="64"/>
@@ -48,7 +48,7 @@ function Skills({skillsRef}) {
             </div>
           </div>
           <div>
-            <h5 className="mb-2">
+            <h5 className="responsiveMarginB2">
               Libraries
             </h5>
             <div className="flex gap-x-4">
@@ -63,7 +63,7 @@ function Skills({skillsRef}) {
             </div>
           </div>
           <div>
-            <h5 className="mb-2">
+            <h5 className="responsiveMarginB2">
               Technologies
             </h5>
             <div className="flex gap-x-4">

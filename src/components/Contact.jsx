@@ -3,8 +3,8 @@ import { GithubSvg } from "../assets/GithubSvg";
 
 function Contact({contactRef}) {
   return (
-    <div ref={contactRef} className="flex flex-col justify-center items-center min-h-[60vh] py-12">
-      <div className="w-[700px] space-y-6">
+    <div ref={contactRef} className="flex flex-col justify-center items-center responsivePaddingY12">
+      <div className="responsiveContainer responsiveSpaceY6">
         <div>
           <h3>
             Thank You

@@ -5,8 +5,8 @@ const handleNavLinks = (nav, links, sections) => {
 
   // check if at the bottom of the page (must be done first)
   // the logic for entering a section below doesnt work for the contacts section becuase it is too small & at the bottom of the page
-  // 50 pixels from the bottom
-  if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 50) {
+  // 10 pixels from the bottom
+  if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 10) {
     index = sections.length - 1;
     links.children[index].classList.add("activeNavLink");
     links.children[index].classList.remove("navLink");
