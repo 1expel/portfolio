@@ -39,7 +39,7 @@ xl: 1280px
 
 @layer utilities {
   .nav2 {
-    @apply fixed top-0;
+    @apply fixed;
     animation: navFadeIn 0.75s linear;
   }
   @keyframes navFadeIn {
